@@ -100,7 +100,7 @@ cpf()
 def data():
         print 'Formato da data: dd/mm/aaaa'
         DATA = raw_input("Informe a sua data de nascimento: ")
-        match = re.match ('^[0-3][0-9][/][0-1][0-9][/][0-9]{4}$' , DATA)
+        match = re.match ('^(0[1-9]|[12][0-9]|3[0-1])/?(0[1-9]|1[0-2])/?(200[0-9]|201[0-8]|19[0-9]{2})$' , DATA)
         if match:
             print  'Data de nascimeto válida!'
             time.sleep(1)
