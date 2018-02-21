@@ -26,7 +26,7 @@ NOME(){
 EMAIL(){
 	clear
 	read -p "Digite um E-mail: " email
-	echo $email | grep -E '^([a-zA-Z0-9_-.])+@[0-9a-zA-Z.-]+\.[a-z]{2,3}$'
+	echo $email | grep -E '^[a-z]+([._-][0-9a-z]+|[0-9])*@[a-z]+([._-][0-9a-z]+|[0-9])*(\.com|\.br|.\com\.br)$'
 	if [ $? == 0 ]; then
 		clear
 		echo "E-mail Válido!"
