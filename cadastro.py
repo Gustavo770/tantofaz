@@ -7,7 +7,7 @@ print ("Bem Vindo!")
 
 def nome():
     Nome = raw_input("Informe o seu nome: ")
-    match = re.match ('[a-zA-Z]', Nome)
+    match = re.match ('[0-9.-\=_,><?:;!@#$%"&*()_+"\]', Nome)
     if match:
         print 'Nome Válido!'
         time.sleep(1)
