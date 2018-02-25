@@ -7,7 +7,7 @@ clear
 
 NOME(){
 	read -p "Digite seu Nome: " nome  	
-	echo $nome | grep -E '[0-9.-\=_,><?:;!@#$%"&*()_+"\]'
+	echo $nome | grep -E '^[a-zA-Z]+{1,6}$'
 	if [ $? == 1 ]; then
 		clear
 		echo "Nome Válido!"
