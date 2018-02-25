@@ -11,7 +11,7 @@ NOME(){
 	if [ $? == 1 ]; then
 		clear
 		echo "Nome Válido!"
-		echo "Nome: $nome" >> /dados/$nome.txt
+		echo "Nome: $nome" >> /dados/"$nome".txt
      		sleep 2
 		clear
 		EMAIL
