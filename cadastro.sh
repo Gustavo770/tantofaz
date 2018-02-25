@@ -2,6 +2,8 @@
 #Data de Criação: 08/02/2018
 
 clear
+mkdir /dados
+clear
 
 NOME(){
 	read -p "Digite seu Nome: " nome  	
@@ -9,7 +11,7 @@ NOME(){
 	if [ $? == 1 ]; then
 		clear
 		echo "Nome Válido!"
-		echo "Nome: $nome" >> /projeto/dados/$nome.txt
+		echo "Nome: $nome" >> /dados/$nome.txt
      		sleep 2
 		clear
 		EMAIL
@@ -26,11 +28,11 @@ NOME(){
 EMAIL(){
 	clear
 	read -p "Digite um E-mail: " email
-	echo $email | grep -E '^[a-z]+([._-][0-9a-z]+|[0-9])*@[a-z]+([._-][0-9a-z]+|[0-9])*(\.com|\.br|.\com\.br)$'
+	echo $email | grep -E '^[a-z]+([._-]?[0-9a-z]+|[0-9])*@[a-z]+([._-]?[0-9a-z]+|[0-9])*(\.com|\.br|.\com\.br)$'
 	if [ $? == 0 ]; then
 		clear
 		echo "E-mail Válido!"
-		echo "E-mail: $email" >> /projeto/dados/$nome.txt
+		echo "E-mail: $email" >> /dados/$nome.txt
 		sleep 2
 		clear
 		TELEFONE
@@ -65,7 +67,7 @@ FIXO(){
         if [ $? == 0 ]; then
                 clear
                 echo "Número de telefone válido!"
-                echo "Telefone fixo: $telefone " >> /projeto/dados/$nome.txt
+                echo "Telefone fixo: $telefone " >> /dados/$nome.txt
                 sleep 1
                 clear
                 RG
@@ -85,7 +87,7 @@ CELL(){
         if [ $? == 0 ]; then
                 clear
                 echo "Número de celular válido!"
-                echo "Telefone celular: $cell " >> /projeto/dados/$nome.txt
+                echo "Telefone celular: $cell " >> /dados/$nome.txt
                 sleep 1
                 clear
                 RG
@@ -104,7 +106,7 @@ RG(){
 	if [ $? == 0 ]; then
 		clear
 		echo "RG Válido!"
-		echo "RG: $rg" >> /projeto/dados/$nome.txt
+		echo "RG: $rg" >> /dados/$nome.txt
 		sleep 2
 		clear
 		CPF
@@ -124,7 +126,7 @@ CPF(){
 	if [ $? == 0 ]; then
 		clear 
 		echo "CPF Válido!"
-		echo "CPF: $cpf" >> /projeto/dados/$nome.txt
+		echo "CPF: $cpf" >> /dados/$nome.txt
 		sleep 2
 		clear
 		DATA
@@ -144,7 +146,7 @@ DATA(){
 	if [ $? == 0 ]; then
 		clear 
 		echo "Data de Nascimento válida!" 
-		echo "Data: $data" >> /projeto/dados/$nome.txt
+		echo "Data: $data" >> /dados/$nome.txt
 		sleep 2
 		clear
 		IP
@@ -164,7 +166,7 @@ IP(){
 	if [ $? == 0 ]; then
 		clear
 		echo "IP Válido!"
-	       	echo "IP: $ip" >> /projeto/dados/$nome.txt	
+	       	echo "IP: $ip" >> /dados/$nome.txt	
 		sleep 2
 		clear
 		MASCARA
@@ -183,7 +185,7 @@ MASCARA(){
 	if [ $? == 0 ]; then
 	  	clear
 		echo "Máscara Válida!" 
-		echo "Máscara: $mascara" >> /projeto/dados/$nome.txt
+		echo "Máscara: $mascara" >> /dados/$nome.txt
 		sleep 1
 		echo "Cadastro Concluído!"
 	else
@@ -194,7 +196,7 @@ MASCARA(){
 		MASCARA
 	fi
 
-	cat /projeto/dados/$nome.txt
+	cat /dados/$nome.txt
 }	
 
 NOME
