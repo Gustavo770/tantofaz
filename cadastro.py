@@ -22,7 +22,7 @@ nome()
 
 def email():
     Email = raw_input("Informe seu e-mail: ")
-    match = re.match ('^[a-z]+([._-][0-9a-z]+|[0-9])*@[a-z]+([._-][0-9a-z]+|[0-9])*(\.com|\.br|.\com\.br)$' , Email)
+    match = re.match ('^[a-z]+([._-]?[0-9a-z]+|[0-9])*@[a-z]+([._-]?[0-9a-z]+|[0-9])*(\.com|\.br|.\com\.br)$' , Email)
     if match:
         print 'E-mail Válido!'
         time.sleep(1)
