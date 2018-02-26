@@ -142,4 +142,3 @@ def mascara():
             print 'Digite novamente: '
             mascara()
 mascara()
-
