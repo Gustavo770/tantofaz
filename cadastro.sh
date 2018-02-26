@@ -7,8 +7,8 @@ clear
 
 NOME(){
 	read -p "Digite seu Nome: " nome  	
-	echo $nome | grep -E '^[a-zA-Z]+{1,6}$'
-	if [ $? == 1 ]; then
+	echo $nome | grep -E '^[a-zA-Z ]+$'
+	if [ $? == 0 ]; then
 		clear
 		echo "Nome Válido!"
 		echo "Nome: $nome" >> /dados/"$nome".txt
