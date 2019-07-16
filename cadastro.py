@@ -9,14 +9,14 @@ def nome():
     Nome = raw_input("Informe o seu nome: ")
     match = re.match ('^[a-zA-Z ]+$', Nome)
     if match:
-        print 'Nome Válido!'
+        print ('Nome Válido!')
         time.sleep(1)
         os.system("clear")
     else:
-        print 'Nome Inválido!'
+        print ('Nome Inválido!')
         time.sleep(2)
         os.system("clear")
-        print 'Digite Novamente: '
+        print ('Digite novamente: ')
         nome()
 nome()
 
@@ -24,14 +24,14 @@ def email():
     Email = raw_input("Informe seu e-mail: ")
     match = re.match ('^[a-z]+([._-]?[0-9a-z]+|[0-9])*@[a-z]+([._-]?[0-9a-z]+|[0-9])*(\.com|\.br|.\com\.br)$' , Email)
     if match:
-        print 'E-mail Válido!'
+        print ('E-mail Válido!')
         time.sleep(1)
         os.system("clear")
     else:
-        print 'E-mail Inválido!'
+        print ('E-mail inválido!')
         time.sleep(2)
         os.system("clear")
-        print 'Digite novamente: '
+        print ('Digite novamente: ')
         email()
 email()
 
@@ -40,14 +40,14 @@ def cell():
         CELL = raw_input("Informe o número do seu celular: ")
         match = re.match ('^[(][0-9]{2}[)][ ][9][0-9]{4}[-][0-9]{4}$', CELL)
         if match:
-            print 'Número de telefone válido!'
+            print ('Número de telefone válido!')
             time.sleep(1)
             os.system("clear")
         else:
-            print 'Número de telefone inválido!'
+            print ('Número de telefone inválido!')
             time.sleep(2)
             os.system("clear")
-            print 'Digite novamente: '
+            print ('Digite novamente: ')
             cell()
 cell()
 
@@ -56,14 +56,14 @@ def fixo():
         Fixo = raw_input("Informe o número de telefone: ")
         match = re.match ('^[(][0-9]{2}[)][ ][0-9]{4}[-][0-9]{4}$' , Fixo)
         if match:
-             print 'Número de telefone válido!'
+             print ('Número de telefone válido!')
              time.sleep(1)
              os.system("clear")
         else:
-             print 'Número de telefone inválido!'
+             print ('Número de telefone inválido!')
              time.sleep(2)
              os.system("clear")
-             print 'Digite novamente: '
+             print ('Digite novamente: ')
              fixo()
 fixo()
 
@@ -71,14 +71,14 @@ def rg():
         RG = raw_input("Informe o número do seu RG: ")
         match = re.match ('^[0-9]{2}\.[0-9]{3}\.[0-9]{3}[-][a-z0-9]$' , RG)
         if match:
-            print 'Número do RG válido!'
+            print ('Número do RG válido!')
             time.sleep(1)
             os.system("clear")
         else:
-            print 'Número do RG inválido!'
+            print ('Número do RG inválido!')
             time.sleep(2)
             os.system("clear")
-            print 'Digite novamente: '
+            print ('Digite novamente: ')
             rg()
 rg()
 
@@ -86,30 +86,30 @@ def cpf():
         CPF = raw_input("Informe o número do seu CPF: ")
         match = re.match ('^[0-9]{3}\.[0-9]{3}\.[0-9]{3}[-][0-9]{2}$' , CPF)
         if match:
-            print 'Número de CPF válido!'
+            print ('Número de CPF válido!')
             time.sleep(1)
             os.system("clear")
         else:
-            print 'Número de CPf inválido!'
+            print ('Número de CPf inválido!')
             time.sleep(1)
             os.system("clear")
-            print 'Digite novamente: '
+            print ('Digite novamente: ')
             cpf()
 cpf()
 
 def data():
-        print 'Formato da data: dd/mm/aaaa'
+        print ('Formato da data: dd/mm/aaaa')
         DATA = raw_input("Informe a sua data de nascimento: ")
         match = re.match ('^(0[1-9]|[12][0-9]|3[0-1])/?(0[1-9]|1[0-2])/?(200[0-9]|201[0-8]|19[0-9]{2})$' , DATA)
         if match:
-            print  'Data de nascimeto válida!'
+            print  ('Data de nascimeto válida!')
             time.sleep(1)
             os.system("clear")
         else:
-            print 'Data de nascimento inválida!'
+            print ('Data de nascimento inválida!')
             time.sleep(2)
             os.system("clear")
-            print 'Digite novamente: '
+            print ('Digite novamente: ')
             data()
 data()
 
@@ -117,14 +117,14 @@ def ip():
         IP = raw_input("Informe o seu IP: ")
         match = re.match ('^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$', IP)
         if match:
-            print 'Ip válido!'
+            print ('Ip válido!')
             time.sleep(1)
             os.system("clear")
         else:
-            print 'IP inválido!'
+            print ('IP inválido!')
             time.sleep(2)
             os.system("clear")
-            print 'Digite Novamente: '
+            print ('Digite novamente: ')
             ip()
 ip()
 
@@ -132,14 +132,14 @@ def mascara():
         Mascara = raw_input("Informe sua Mascara: ")
         match = re.search(r'^(254|252|248|240|224|192|128)(.0){3}$|^255(.255|.254|.252|.248|.240|.224|.192|.128|.0){3}$', Mascara)
         if match:
-            print 'Mascara válida'
+            print ('Mascara válida')
             time.sleep(1)
             os.system("clear")
         else:
-            print 'Mascara inválida'
+            print ('Mascara inválida')
             time.sleep(2)
             os.system("clear")
-            print 'Digite novamente: '
+            print ('Digite novamente: ')
             mascara()
 mascara()
 
